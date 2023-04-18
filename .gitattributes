@@ -1,0 +1,6 @@
+*.py linguist-detectable=true
+*.ipynb linguist-detectable=true
+*.html linguist-detectable=false
+*.htm linguist-detectable=false
+*.pdf linguist-detectable=false
+data/* linguist-documentation
