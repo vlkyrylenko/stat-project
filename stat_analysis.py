@@ -51,3 +51,4 @@ class STAT:
         STAT.get_parameters.df = pd.read_csv(pathToFile, header=0, encoding='utf-8',index_col=None)
         STAT.get_parameters.mean = STAT.get_parameters.df[attributeName].mean()
         STAT.get_parameters.std = STAT.get_parameters.df[attributeName].std()
+        STAT.get_parameters.median = STAT.get_parameters.df[attributeName].median()

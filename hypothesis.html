@@ -15144,7 +15144,7 @@ We expect that the new survey will uncover more potential issues and will provid
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[361]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Data manipulation</span>
@@ -15221,7 +15221,7 @@ We expect that the new survey will uncover more potential issues and will provid
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[362]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># System libraries</span>
@@ -15301,7 +15301,7 @@ For more information, please refer to the documentation and code repository.</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[363]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Export csv file as a data frame and calculate statistical parameters</span>
@@ -15310,8 +15310,10 @@ For more information, please refer to the documentation and code repository.</p>
 <span class="n">STAT</span><span class="o">.</span><span class="n">get_parameters</span><span class="p">(</span><span class="s1">&#39;./data/new_data.csv&#39;</span><span class="p">,</span><span class="s1">&#39;POWN_80&#39;</span><span class="p">)</span>
 <span class="n">mortgage_mean</span> <span class="o">=</span> <span class="n">STAT</span><span class="o">.</span><span class="n">get_parameters</span><span class="o">.</span><span class="n">mean</span>
 <span class="n">mortgage_std</span> <span class="o">=</span> <span class="n">STAT</span><span class="o">.</span><span class="n">get_parameters</span><span class="o">.</span><span class="n">std</span>
+<span class="n">mortgage_median</span> <span class="o">=</span> <span class="n">STAT</span><span class="o">.</span><span class="n">get_parameters</span><span class="o">.</span><span class="n">median</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Mean of the remaining mortgage owned is: </span><span class="si">{:.2f}</span><span class="s1">$ CAD&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">mortgage_mean</span><span class="p">))</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Standard deviation of the remaining mortgage owned is: </span><span class="si">{:.2f}</span><span class="s1">$ CAD&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">mortgage_std</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Median of the remaining mortgage owned is: </span><span class="si">{:.2f}</span><span class="s1">$ CAD&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">mortgage_median</span><span class="p">))</span>
 </pre></div>
 
      </div>
@@ -15333,6 +15335,7 @@ For more information, please refer to the documentation and code repository.</p>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
 <pre>Mean of the remaining mortgage owned is: 195666.83$ CAD
 Standard deviation of the remaining mortgage owned is: 156177.76$ CAD
+Median of the remaining mortgage owned is: 160000.00$ CAD
 </pre>
 </div>
 </div>
@@ -15360,15 +15363,17 @@ Standard deviation of the remaining mortgage owned is: 156177.76$ CAD
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[364]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># PHHTTINC - Total income of household</span>
 <span class="n">STAT</span><span class="o">.</span><span class="n">get_parameters</span><span class="p">(</span><span class="s1">&#39;./data/new_data.csv&#39;</span><span class="p">,</span><span class="s1">&#39;PHHTTINC&#39;</span><span class="p">)</span>
 <span class="n">income_mean</span> <span class="o">=</span> <span class="n">STAT</span><span class="o">.</span><span class="n">get_parameters</span><span class="o">.</span><span class="n">mean</span>
 <span class="n">income_std</span> <span class="o">=</span> <span class="n">STAT</span><span class="o">.</span><span class="n">get_parameters</span><span class="o">.</span><span class="n">std</span>
+<span class="n">income_median</span> <span class="o">=</span> <span class="n">STAT</span><span class="o">.</span><span class="n">get_parameters</span><span class="o">.</span><span class="n">median</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Mean of the household income is: </span><span class="si">{:.2f}</span><span class="s1">$ CAD&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">income_mean</span><span class="p">))</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Standard deviation of the household income is: </span><span class="si">{:.2f}</span><span class="s1">$ CAD&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">income_std</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Median of the household income is: </span><span class="si">{:.2f}</span><span class="s1">$ CAD&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">income_median</span><span class="p">))</span>
 </pre></div>
 
      </div>
@@ -15390,6 +15395,7 @@ Standard deviation of the remaining mortgage owned is: 156177.76$ CAD
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
 <pre>Mean of the household income is: 134899.05$ CAD
 Standard deviation of the household income is: 92340.09$ CAD
+Median of the household income is: 115000.00$ CAD
 </pre>
 </div>
 </div>
@@ -15403,7 +15409,7 @@ Standard deviation of the household income is: 92340.09$ CAD
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[365]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">rc</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;axes.facecolor&#39;</span><span class="p">:</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="s1">&#39;figure.facecolor&#39;</span><span class="p">:</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="s1">&#39;axes.grid&#39;</span> <span class="p">:</span> <span class="kc">False</span><span class="p">})</span>
@@ -15424,13 +15430,13 @@ Standard deviation of the household income is: 92340.09$ CAD
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[365]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[5]:</div>
 
 
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>&lt;matplotlib.legend.Legend at 0x7f662d14c4d0&gt;</pre>
+<pre>&lt;matplotlib.legend.Legend at 0x7f142e553550&gt;</pre>
 </div>
 
 </div>
@@ -15538,7 +15544,7 @@ T = \frac{\bar{x} - \mu}{\frac {s}{\sqrt{n}}}
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[366]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">STAT</span><span class="o">.</span><span class="n">append_csv</span><span class="o">.</span><span class="n">df</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
@@ -15595,7 +15601,7 @@ T = \frac{\bar{x} - \mu}{\frac {s}{\sqrt{n}}}
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[367]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">stats</span><span class="o">.</span><span class="n">ttest_1samp</span><span class="p">(</span><span class="n">popmean</span><span class="o">=</span><span class="n">income_mean</span><span class="p">,</span><span class="n">a</span><span class="o">=</span><span class="n">STAT</span><span class="o">.</span><span class="n">append_csv</span><span class="o">.</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;POWN_80&#39;</span><span class="p">])</span>
@@ -15614,7 +15620,7 @@ T = \frac{\bar{x} - \mu}{\frac {s}{\sqrt{n}}}
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[367]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[7]:</div>
 
 
 
@@ -15646,7 +15652,7 @@ T = \frac{\bar{x} - \mu}{\frac {s}{\sqrt{n}}}
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[368]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#x-axis ranges from -5 and 5 with .001 steps</span>
@@ -15672,13 +15678,13 @@ T = \frac{\bar{x} - \mu}{\frac {s}{\sqrt{n}}}
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[368]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[8]:</div>
 
 
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>&lt;matplotlib.legend.Legend at 0x7f662d4c4f10&gt;</pre>
+<pre>&lt;matplotlib.legend.Legend at 0x7f142e44dc50&gt;</pre>
 </div>
 
 </div>
@@ -15720,7 +15726,7 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[369]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[9]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># P-value in the right-tailed test:</span>
@@ -15741,7 +15747,7 @@ class="
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[369]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[9]:</div>
 
 
 
