@@ -1,0 +1,33 @@
+name: CodeQL Analysis
+on:
+  push:
+    branches:
+      - master
+      - vlad.kyrylenko/DVOP-1284-codeql-workflow
+  workflow_dispatch:
+    inputs:
+      ack:
+        description: "Are you sure you want to run this workflow?"
+        required: yes
+        default: yes
+        type: string
+
+jobs:
+  analyze:
+    name: Analyze Code
+    runs-on: ubuntu-latest
+    environment: Tests
+    permissions:
+      contents: read
+      security-events: write
+      actions: read
+      id-token: write
+    steps:
+      - name: CodeQL check
+        uses: MaintainX/gh-action-security/codeql@v1.0.3
+        with:
+          language: "javascript-typescript"
+          timeout: 360
+        env:
+          AWS__TESTS__REGION: ${{ vars.AWS__TESTS__REGION }}
+          AWS__TESTS__ROLE: ${{ vars.AWS__TESTS__ROLE }}
