@@ -3,7 +3,7 @@ on:
   push:
     branches:
       - master
-      - vlad.kyrylenko/DVOP-1284-codeql-workflow
+
   workflow_dispatch:
     inputs:
       ack:
