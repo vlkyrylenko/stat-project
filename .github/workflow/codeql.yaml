@@ -26,7 +26,6 @@ jobs:
       - name: CodeQL check
         uses: MaintainX/gh-action-security/codeql@v1.0.3
         with:
-          language: "javascript-typescript"
           timeout: 360
         env:
           AWS__TESTS__REGION: ${{ vars.AWS__TESTS__REGION }}
